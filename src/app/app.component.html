@@ -1,7 +1,9 @@
 
 <html>
     <h1>Contact Manager</h1>
-    @for (contact of contacts; track contact){
-   <app-contact-title [user]=contact> </app-contact-title>
-    }
+    <div class = "buttons">
+        <button class = "btn btn-primary" routerLink = "">List of Contacts</button>
+        <button class = "btn btn-primary" routerLink = "add">Add contact</button>
+    </div>
+<router-outlet></router-outlet>
 </html>
