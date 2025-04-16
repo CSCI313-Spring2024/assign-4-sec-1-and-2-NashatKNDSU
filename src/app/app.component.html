@@ -1,5 +1,7 @@
-<div>Hello World!</div>
 
 <html>
-    <app-root></app-root>
+    <h1>Contact Manager</h1>
+    @for (contact of contacts; track contact){
+   <app-contact-title [user]=contact> </app-contact-title>
+    }
 </html>

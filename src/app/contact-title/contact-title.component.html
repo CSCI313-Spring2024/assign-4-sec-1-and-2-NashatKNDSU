@@ -1,5 +1,73 @@
 <div class = "contacts">
     <div class = "contact-card">
-        <div class = "contact-name"> {{user.firstname}}</div>
+        <div class = "contact-name"> {{user.firstname}} {{user.lastname}}</div>
+        <div>{{user.email}}</div>
+        <div>{{user.phonenumber}}</div>
+        <div class = "b1">
+            <button class="btn btn-primary" >Edit</button>
+        </div>
+        <div class = "b2">
+            <button class="btn btn-primary" >Delete</button>
+        </div>
     </div>
 </div>
+
+
+
+
+
+
+
+<!-- <div class="container mt-4">
+    <h2>Contact List</h2>
+  
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>First Name</th><th>Last Name</th><th>Phone</th><th>Email</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <ng-container *ngIf="selectedUser?.id !== user.id">
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>{{ user.phonenumber }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+              <button class="btn btn-sm btn-primary me-2" (click)="editContact(user)">Edit</button>
+               <button class="btn btn-sm btn-danger" (click)="deleteContact(contact)">Delete</button>
+            </td>
+          </ng-container>
+          <ng-container *ngIf="selectedUser?.id === user.id">
+            <td><input class="form-control" [(ngModel)]="selectedUser!.firstname" /></td>
+            <td><input class="form-control" [(ngModel)]="selectedUser!.lastname" /></td>
+            <td><input class="form-control" [(ngModel)]="selectedUser!.phonenumber" /></td>
+            <td><input class="form-control" [(ngModel)]="selectedUser!.email" /></td>
+            <td>
+              <button class="btn btn-sm btn-success me-2" (click)="saveContact()">Save</button>
+              <button class="btn btn-sm btn-secondary" (click)="cancelEdit()">Cancel</button>
+            </td>
+          </ng-container>
+        </tr>
+      </tbody>
+    </table>
+  
+    <h3 class="mt-4">Add New Contact</h3>
+    <div class="row g-3">
+      <div class="col-md-3">
+        <input class="form-control" placeholder="First Name" [(ngModel)]="newUser.firstname" />
+      </div>
+      <div class="col-md-3">
+        <input class="form-control" placeholder="Last Name" [(ngModel)]="newUser.lastname" />
+      </div>
+      <div class="col-md-3">
+        <input class="form-control" placeholder="Phone" [(ngModel)]="newUser.phonenumber" />
+      </div>
+      <div class="col-md-3">
+        <input class="form-control" placeholder="Email" [(ngModel)]="newUser.email" />
+      </div>
+    </div>
+    <button class="btn btn-success mt-3" (click)="addContact()">Add Contact</button>
+  </div>
+   -->
